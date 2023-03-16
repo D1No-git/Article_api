@@ -1,3 +1,5 @@
+using dll.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,6 +14,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 // DI - registering of services
+builder.Services.AddScoped<IDataContext, DataContext>();
 
 var app = builder.Build();
 
