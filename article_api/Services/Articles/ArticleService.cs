@@ -95,7 +95,7 @@ namespace article_api.Services.Articles
 
                 var validationResult = ValidateRequest(request);
 
-                if (!ValidateRequest(request).isValid)
+                if (!validationResult.isValid)
                     return (false, null, validationResult.errorMessage);
 
                 article.ArticleNumber = request.ArticleNumber;

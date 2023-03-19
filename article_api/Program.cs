@@ -1,3 +1,5 @@
+using article_api.Interfaces.Articles;
+using article_api.Services.Articles;
 using dll.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +17,7 @@ builder.Services.AddSwaggerGen(c =>
 
 // DI - registering of services
 builder.Services.AddScoped<IDataContext, DataContext>();
+builder.Services.AddScoped<IArticleService, ArticleService>();
 
 var app = builder.Build();
 
