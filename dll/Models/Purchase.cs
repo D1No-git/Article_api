@@ -12,7 +12,7 @@ namespace dll.Models
     public class Purchase
     {
         [Required]
-        public int Id { get; set; }
+        public string? PurchaseId { get; set; }
 
         [Required]
         public string? ArticleNumber { get; set; }

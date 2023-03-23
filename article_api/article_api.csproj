@@ -15,4 +15,9 @@
     <ProjectReference Include="..\dll\dll.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\Reports\" />
+    <Folder Include="Services\Reports\" />
+  </ItemGroup>
+
 </Project>

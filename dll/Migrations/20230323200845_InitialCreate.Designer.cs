@@ -12,8 +12,8 @@ using dll.Data;
 namespace dll.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230316194121_Initial")]
-    partial class Initial
+    [Migration("20230323200845_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,11 +55,8 @@ namespace dll.Migrations
 
             modelBuilder.Entity("dll.Models.Purchase", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<string>("PurchaseId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ArticleNumber")
                         .IsRequired()
@@ -71,7 +68,7 @@ namespace dll.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("Id");
+                    b.HasKey("PurchaseId");
 
                     b.ToTable("Purchases");
                 });
