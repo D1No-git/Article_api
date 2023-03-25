@@ -1,6 +1,8 @@
 using article_api.Interfaces.Articles;
+using article_api.Interfaces.Reports;
 using article_api.Interfaces.Sales;
 using article_api.Services.Articles;
+using article_api.Services.Reports;
 using article_api.Services.Sales;
 using dll.Data;
 
@@ -21,6 +23,7 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddScoped<IDataContext, DataContext>();
 builder.Services.AddScoped<IArticleService, ArticleService>();
 builder.Services.AddScoped<ISalesService, SalesService>();
+builder.Services.AddScoped<IReportsService, ReportsService>();
 
 var app = builder.Build();
 

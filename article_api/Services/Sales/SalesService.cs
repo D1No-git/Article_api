@@ -18,11 +18,10 @@ namespace article_api.Services.Sales
             _logger = logger;
         }
 
-        public async Task<(bool IsSuccess, string? ErrorMessage)> PostPurchase(Article article)
+        public async Task<(bool isSuccess, string? ErrorMessage)> PostPurchase(Article article)
         {
             try
             {
-
                 if (article == null)
                     return (false, "Article not valid.");
 
