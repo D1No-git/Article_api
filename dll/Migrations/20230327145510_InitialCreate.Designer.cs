@@ -12,7 +12,7 @@ using dll.Data;
 namespace dll.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230323200845_InitialCreate")]
+    [Migration("20230327145510_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
